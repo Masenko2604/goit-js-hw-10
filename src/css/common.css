@@ -1,43 +1,41 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
-
-body {
-  background-color: #f5f0ce;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  padding: 15px;
-  max-width: 428px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1158px;
-  }
-}
-
 .loader {
-  width: 48px;
-  height: 48px;
-  border: 5px dotted #2596be;
+  margin: 70px auto;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   display: inline-block;
   position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
   box-sizing: border-box;
-  animation: rotation 2s linear infinite;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #ff3d00 #ff3d00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 1.5s linear infinite;
 }
 
 @keyframes rotation {
@@ -50,25 +48,23 @@ img {
   }
 }
 
-.unvisible {
-  display: none;
-}
-
-.cat-info-desc-desc,
-.cat-info-desc-temp {
-  line-height: 150%;
-}
-
-.cat-info {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .cat-info {
-    flex-direction: row;
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
   }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.breed-select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ead9fa;
+  cursor: pointer;
 }

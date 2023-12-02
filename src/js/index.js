@@ -1,8 +1,4 @@
-// import axios from "axios";
-
-// axios.defaults.headers.common["x-api-key"] = 
-
-import { fetchCatByBreed } from './cat-api';
+import { fetchCatByBreed} from './cat-api';
 import { renderBreedDesc } from './renderBreedDesc';
 import { fetchAndRenderBreeds } from './fetchAndRenderBreeds';
 

@@ -64,7 +64,8 @@
   padding: 10px;
   font-size: 16px;
   border: 1px solid #cccccc;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #dcebd2;
   cursor: pointer;
+  box-shadow: inset 4.3px 4.3px 7px #fff;
 }

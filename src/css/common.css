@@ -60,11 +60,11 @@
 
 .breed-select {
   display: block;
-  width: 100px;
+  width: 300px;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #d9f6fa;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-color: #dcebd2;
   cursor: pointer;
 }
